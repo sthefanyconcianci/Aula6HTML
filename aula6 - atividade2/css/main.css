@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191919;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* MENU */
+
+header {
+    padding: 17px 3.5%;
+}
+
+nav {
+    display: inline-block;
+    background-color: #17140d;
+    padding: 30px 45px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #d6b653;
+    border-radius: 50%;
+    bottom: -10px;
+    left: 50%;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 5%;
+    min-height: 700px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 520px;
+}
+
+.subtitle {
+    color: #d6b653;
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.hero-text h1 {
+    font-size: 58px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+}
+
+.hero-text h1 span {
+    color: #d6b653;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+button {
+    background-color: #d6b653;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 35px;
+    cursor: pointer;
+}
+
+/* IMAGEM */
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* CELULAR E TABLET */
+
+@media (max-width: 900px) {
+    nav {
+        display: block;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 6%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+}
